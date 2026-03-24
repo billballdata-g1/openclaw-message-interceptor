@@ -3,13 +3,20 @@
   "name": "Message Interceptor",
   "description": "Intercepts and transforms incoming messages before they reach the agent using OpenClaw SDK hooks",
   "version": "1.0.0",
+  "author": "Bill <billballdata-g1@users.noreply.github.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/billballdata-g1/openclaw-message-interceptor"
+  },
+  "license": "MIT",
   "configSchema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "properties": {
       "enabled": {
         "type": "boolean",
         "default": true,
-        "description": "Enable/disable interceptor globally"
+        "description": "Enable or disable the interceptor globally"
       },
       "rules": {
         "type": "array",
@@ -25,15 +32,6 @@
             "replacement": {
               "type": "string",
               "description": "Replacement text"
-            },
-            "regex": {
-              "type": "boolean",
-              "default": false,
-              "description": "Whether pattern is a regex"
-            },
-            "flags": {
-              "type": "string",
-              "description": "Regex flags (e.g., 'i' for case-insensitive)"
             }
           }
         }
